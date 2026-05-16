@@ -1,0 +1,13 @@
+# dev environment for news-service
+# Cluster: kind-dev (set up by tf-platform)
+# Chart: oci://ghcr.io/tim-feldhaus/charts/news-service
+
+image:
+  registry: ghcr.io/tim-feldhaus
+  tag: "0.0.1"
+  pullPolicy: IfNotPresent
+
+httpserver:
+  service:
+    type: NodePort
+    nodePort: 31000          # matches kind-dev port-mapping (tf-platform clusters/kind-dev/config.yaml)
