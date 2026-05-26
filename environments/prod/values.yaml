@@ -1,0 +1,10 @@
+# prod environment for news-service
+# Cluster: NOT YET PROVISIONED — see tf-platform/clusters/prod/ (Phase 8+)
+
+image:
+  registry: ghcr.io/tf-systems
+  tag: "0.0.1"
+  pullPolicy: IfNotPresent
+
+# TODO: configure replicas, resources, ingress host, persistent storage
+# once prod cluster exists.
