@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: news-service-prod
+  namespace: argocd
+  labels:
+    env: prod
+    service: news-service
+spec:
+  project: default
+  sources:
+    - repoURL: ghcr.io/tf-systems/charts
+      chart: news-service
+      targetRevision: 0.0.1
+      helm:
+        releaseName: news-service
+        valueFiles:
+          - $values/environments/prod/values.yaml
+    - repoURL: https://github.com/tf-systems/tf-news-service-deployment
+      targetRevision: main
+      ref: values
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: news-prod
+  syncPolicy:
+    # Prod is manual sync — promote via PR + UI confirm.
+    syncOptions:
+      - CreateNamespace=true
+      - ServerSideApply=true
