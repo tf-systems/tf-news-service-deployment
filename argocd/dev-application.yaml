@@ -11,7 +11,7 @@ spec:
   sources:
     - repoURL: ghcr.io/tf-systems/charts
       chart: news-service
-      targetRevision: 0.0.1-feat-ghcr-smoke-etappe3.cea0c0c
+      targetRevision: 0.0.1-feat-ghcr-smoke-etappe3.82dcf21
       helm:
         releaseName: news-service
         valueFiles:

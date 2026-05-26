@@ -4,7 +4,7 @@
 
 image:
   registry: ghcr.io/tf-systems
-  tag: "0.0.1-feat-ghcr-smoke-etappe3.cea0c0c"
+  tag: "0.0.1-feat-ghcr-smoke-etappe3.82dcf21"
   pullPolicy: IfNotPresent
 httpserver:
   service:
