@@ -11,13 +11,13 @@ spec:
   sources:
     - repoURL: ghcr.io/tf-systems/charts
       chart: news-service
-      targetRevision: 0.0.1
+      targetRevision: 0.0.1-feat-ghcr-smoke-etappe3.cea0c0c
       helm:
         releaseName: news-service
         valueFiles:
           - $values/environments/dev/values.yaml
     - repoURL: https://github.com/tf-systems/tf-news-service-deployment
-      targetRevision: main
+      targetRevision: feat/ghcr-smoke-etappe3
       ref: values
   destination:
     server: https://kubernetes.default.svc
