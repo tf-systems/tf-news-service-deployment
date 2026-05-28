@@ -7,15 +7,15 @@ metadata:
     env: dev
     service: news-service
   annotations:
-    github.com/deployment-id: "4847326320"
+    github.com/deployment-id: "4847819634"
     github.com/repo: tf-systems/tf-news-service
-    github.com/log-url: https://github.com/tf-systems/tf-news-service/actions/runs/26569474823
+    github.com/log-url: https://github.com/tf-systems/tf-news-service/actions/runs/26571629568
 spec:
   project: default
   sources:
     - repoURL: ghcr.io/tf-systems/charts
       chart: news-service
-      targetRevision: 0.0.1-feat-verify-argo-callback.fa455f7
+      targetRevision: 0.0.1-feat-verify-argo-callback.6ad17f1
       helm:
         releaseName: news-service
         valueFiles:
