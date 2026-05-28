@@ -4,7 +4,7 @@
 
 image:
   registry: ghcr.io/tf-systems
-  tag: "0.0.1-feat-verify-argo-callback.6ad17f1"
+  tag: "0.0.1-feat-verify-argo-callback.67f8e27"
   pullPolicy: IfNotPresent
 httpserver:
   service:
