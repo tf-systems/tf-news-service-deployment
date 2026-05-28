@@ -6,18 +6,22 @@ metadata:
   labels:
     env: dev
     service: news-service
+  annotations:
+    github.com/deployment-id: "4847326320"
+    github.com/repo: tf-systems/tf-news-service
+    github.com/log-url: https://github.com/tf-systems/tf-news-service/actions/runs/26569474823
 spec:
   project: default
   sources:
     - repoURL: ghcr.io/tf-systems/charts
       chart: news-service
-      targetRevision: 0.0.1
+      targetRevision: 0.0.1-feat-verify-argo-callback.fa455f7
       helm:
         releaseName: news-service
         valueFiles:
           - $values/environments/dev/values.yaml
     - repoURL: https://github.com/tf-systems/tf-news-service-deployment
-      targetRevision: main
+      targetRevision: feat/verify-argo-callback
       ref: values
   destination:
     server: https://kubernetes.default.svc
