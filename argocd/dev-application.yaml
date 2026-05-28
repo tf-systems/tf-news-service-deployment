@@ -6,18 +6,23 @@ metadata:
   labels:
     env: dev
     service: news-service
+  annotations:
+    github.com/deployment-id: "4848748204"
+    github.com/repo: tf-systems/tf-news-service
+    github.com/log-url: https://github.com/tf-systems/tf-news-service/actions/runs/26575499501
+    github.com/environment-url: https://github.com/tf-systems/tf-news-service-deployment/pulls?q=is%3Apr+head%3Afeat/env-mutation-fix
 spec:
   project: default
   sources:
     - repoURL: ghcr.io/tf-systems/charts
       chart: news-service
-      targetRevision: 0.0.1
+      targetRevision: 0.0.1-feat-env-mutation-fix.1266661
       helm:
         releaseName: news-service
         valueFiles:
           - $values/environments/dev/values.yaml
     - repoURL: https://github.com/tf-systems/tf-news-service-deployment
-      targetRevision: main
+      targetRevision: feat/env-mutation-fix
       ref: values
   destination:
     server: https://kubernetes.default.svc
