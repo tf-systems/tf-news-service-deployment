@@ -9,4 +9,4 @@ permissions:
 
 jobs:
   pr-title:
-    uses: tf-systems/tf-pipeline/.github/workflows/pr-title-lint.yml@v0.2.0
+    uses: tf-systems/tf-pipeline/.github/workflows/pr-title-lint.yml@v0.3.0
