@@ -4,7 +4,7 @@
 
 image:
   registry: ghcr.io/tf-systems
-  tag: "0.3.0"
+  tag: "0.3.0-fix-remove-unused-swaggo-files-v2.7d1dbb6"
   pullPolicy: IfNotPresent
 httpserver:
   service:

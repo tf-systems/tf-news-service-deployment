@@ -7,22 +7,22 @@ metadata:
     env: dev
     service: news-service
   annotations:
-    github.com/deployment-id: "5179323367"
+    github.com/deployment-id: "5186579527"
     github.com/repo: tf-systems/tf-news-service
-    github.com/log-url: https://github.com/tf-systems/tf-news-service/actions/runs/28091087521
-    github.com/environment-url: https://github.com/tf-systems/tf-news-service-deployment/pulls?q=is%3Apr+head%3Adeploy%2Fnews-service%2Fdev%2Fv0.3.0
+    github.com/log-url: https://github.com/tf-systems/tf-news-service/actions/runs/28124830582
+    github.com/environment-url: https://github.com/tf-systems/tf-news-service-deployment/pulls?q=is%3Apr+head%3Afix/remove-unused-swaggo-files-v2
 spec:
   project: default
   sources:
     - repoURL: ghcr.io/tf-systems/charts
       chart: news-service
-      targetRevision: 0.3.0
+      targetRevision: 0.3.0-fix-remove-unused-swaggo-files-v2.7d1dbb6
       helm:
         releaseName: news-service
         valueFiles:
           - $values/environments/dev/values.yaml
     - repoURL: https://github.com/tf-systems/tf-news-service-deployment
-      targetRevision: main
+      targetRevision: fix/remove-unused-swaggo-files-v2
       ref: values
   destination:
     server: https://kubernetes.default.svc
