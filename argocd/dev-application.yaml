@@ -7,16 +7,16 @@ metadata:
     env: dev
     service: news-service
   annotations:
-    github.com/deployment-id: "5179323367"
+    github.com/deployment-id: "5186708428"
     github.com/repo: tf-systems/tf-news-service
-    github.com/log-url: https://github.com/tf-systems/tf-news-service/actions/runs/28091087521
-    github.com/environment-url: https://github.com/tf-systems/tf-news-service-deployment/pulls?q=is%3Apr+head%3Adeploy%2Fnews-service%2Fdev%2Fv0.3.0
+    github.com/log-url: https://github.com/tf-systems/tf-news-service/actions/runs/28125544360
+    github.com/environment-url: https://github.com/tf-systems/tf-news-service-deployment/pulls?q=is%3Apr+head%3Adeploy%2Fnews-service%2Fdev%2Fv0.4.0
 spec:
   project: default
   sources:
     - repoURL: ghcr.io/tf-systems/charts
       chart: news-service
-      targetRevision: 0.3.0
+      targetRevision: 0.4.0
       helm:
         releaseName: news-service
         valueFiles:
