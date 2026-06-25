@@ -1,0 +1,16 @@
+name: ci
+
+# PR gate: lint Argo / Helm-values manifests so a broken manifest can't reach main.
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+
+jobs:
+  manifest-lint:
+    uses: tf-systems/tf-pipeline/.github/workflows/manifest-lint.yml@v0.4.0
+    with:
+      paths: "argocd environments"
