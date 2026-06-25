@@ -11,6 +11,6 @@ permissions:
 
 jobs:
   manifest-lint:
-    uses: tf-systems/tf-pipeline/.github/workflows/manifest-lint.yml@v0.4.1
+    uses: tf-systems/tf-pipeline/.github/workflows/manifest-lint.yml@v0.5.0
     with:
       paths: "argocd environments"
